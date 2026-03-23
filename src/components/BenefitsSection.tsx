@@ -20,7 +20,7 @@ const BenefitsSection = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-display font-bold text-center mb-4"
         >
-          Почему <span className="text-gradient-gold">SunMax</span>?
+          Почему <span className="text-gradient-gold">SunMaxKzn</span>?
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
