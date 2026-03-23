@@ -19,7 +19,7 @@ const HeroSection = ({ onStart }: { onStart: () => void }) => {
           className="flex items-center justify-center gap-2 mb-6"
         >
           <Shield className="w-8 h-8 text-primary" />
-          <span className="text-2xl font-display font-bold tracking-wider">SunMax</span>
+          <span className="text-2xl font-display font-bold tracking-wider">SunMazKzn</span>
         </motion.div>
 
         <motion.p
