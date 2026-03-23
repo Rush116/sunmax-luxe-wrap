@@ -258,7 +258,7 @@ const QuizSection = forwardRef<HTMLDivElement>((_, ref) => {
                         <h3 className="text-xl font-display font-bold">{s.question}</h3>
                       </div>
 
-                      <div className="grid grid-cols-2 gap-3 flex-1">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 flex-1">
                         {s.options.map((opt) => {
                           const selected = s.multi
                             ? (answers[s.id as keyof QuizAnswers] as string[]).includes(opt.value)
