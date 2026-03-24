@@ -77,7 +77,7 @@ const HeroSection = ({ onStart }: { onStart: () => void }) => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
           onClick={onStart}
-          className="bg-gradient-gold text-primary-foreground font-display font-bold text-lg px-10 py-4 rounded-lg glow-gold transition-all"
+          className="bg-gradient-gold text-red-500 font-display font-bold text-lg px-10 py-4 rounded-lg glow-gold transition-all"
         >
           Рассчитать стоимость
         </motion.button>
