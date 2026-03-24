@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Shield, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImg from "@/assets/hero-car.jpg";
 
 const HeroSection = ({ onStart }: { onStart: () => void }) => {
@@ -44,6 +45,21 @@ const HeroSection = ({ onStart }: { onStart: () => void }) => {
           Защитите свой автомобиль{" "}
           <span className="text-gradient-gold">навсегда</span>
         </motion.h1>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.55, duration: 0.6 }}
+          className="mb-8"
+        >
+          <Link
+            to="/risk-zones"
+            className="inline-flex items-center gap-2 rounded-xl border border-primary/30 bg-background/55 px-6 py-4 font-display text-sm md:text-base font-semibold tracking-[0.08em] uppercase text-foreground hover:bg-background/80 hover:border-primary/60 transition-all"
+          >
+            <Shield className="w-5 h-5 text-primary" />
+            Оклейка зон риска автомобиля
+          </Link>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
