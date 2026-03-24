@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Shield, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImg from "@/assets/hero-car.jpg";
 
 const HeroSection = ({ onStart }: { onStart: () => void }) => {
@@ -25,9 +26,14 @@ const HeroSection = ({ onStart }: { onStart: () => void }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6"
+          className="mb-7 flex flex-col items-center gap-2"
         >
-          Казань · Студия защиты автомобилей
+          <span className="font-display text-3xl md:text-4xl font-black tracking-[0.12em] text-gradient-gold drop-shadow-[0_0_20px_hsl(var(--primary)/0.4)]">
+            SunMaxKzn
+          </span>
+          <span className="font-display text-muted-foreground/95 text-sm md:text-base tracking-[0.28em] uppercase">
+            Студия защиты автомобилей в Казани
+          </span>
         </motion.p>
 
         <motion.h1
@@ -40,13 +46,28 @@ const HeroSection = ({ onStart }: { onStart: () => void }) => {
           <span className="text-gradient-gold">навсегда</span>
         </motion.h1>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.55, duration: 0.6 }}
+          className="mb-8"
+        >
+          <Link
+            to="/risk-zones"
+            className="inline-flex items-center gap-2 rounded-xl border border-primary/30 bg-background/55 px-6 py-4 font-display text-sm md:text-base font-semibold tracking-[0.08em] uppercase text-foreground hover:bg-background/80 hover:border-primary/60 transition-all"
+          >
+            <Shield className="w-5 h-5 text-primary" />
+            Оклейка зон риска автомобиля
+          </Link>
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.6 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
         >
-          Премиальная оклейка полиуретановой плёнкой. Рассчитайте стоимость за 1 минуту.
+          SunMaxKzn — премиальная оклейка полиуретановой плёнкой. Рассчитайте стоимость за 1 минуту.
         </motion.p>
 
         <motion.button

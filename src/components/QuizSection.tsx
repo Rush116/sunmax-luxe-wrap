@@ -149,7 +149,7 @@ const QuizSection = forwardRef<HTMLDivElement>((_, ref) => {
         >
           Рассчитайте <span className="text-gradient-gold">стоимость</span>
         </motion.h2>
-        <p className="text-muted-foreground text-center mb-10">5 простых вопросов — и вы узнаете цену</p>
+        <p className="text-muted-foreground text-center mb-10">5 простых вопросов — и SunMaxKzn подготовит расчет стоимости</p>
 
         {/* Progress */}
         <div className="mb-8">
@@ -180,7 +180,7 @@ const QuizSection = forwardRef<HTMLDivElement>((_, ref) => {
                   <Check className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-2xl font-display font-bold">Заявка отправлена!</h3>
-                <p className="text-muted-foreground">Мы свяжемся с вами в ближайшее время для подтверждения записи.</p>
+                <p className="text-muted-foreground">Менеджер SunMaxKzn свяжется с вами в ближайшее время для подтверждения записи.</p>
                 <div className="mt-4 text-3xl font-display font-bold text-gradient-gold">
                   ≈ {price.toLocaleString("ru-RU")} ₽
                 </div>
