@@ -25,12 +25,12 @@ const HeroSection = ({ onStart }: { onStart: () => void }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="mb-6 flex flex-col items-center gap-1"
+          className="mb-7 flex flex-col items-center gap-2"
         >
-          <span className="font-display text-2xl md:text-3xl font-black tracking-[0.08em] text-gradient-gold drop-shadow-[0_0_18px_hsl(var(--primary)/0.35)]">
+          <span className="font-display text-3xl md:text-4xl font-black tracking-[0.12em] text-gradient-gold drop-shadow-[0_0_20px_hsl(var(--primary)/0.4)]">
             SunMaxKzn
           </span>
-          <span className="text-muted-foreground text-base md:text-lg tracking-[0.2em] uppercase">
+          <span className="font-display text-muted-foreground/95 text-sm md:text-base tracking-[0.28em] uppercase">
             Студия защиты автомобилей в Казани
           </span>
         </motion.p>
