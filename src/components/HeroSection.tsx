@@ -25,9 +25,14 @@ const HeroSection = ({ onStart }: { onStart: () => void }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6"
+          className="mb-6 flex flex-col items-center gap-1"
         >
-          Казань · Студия защиты автомобилей
+          <span className="font-display text-2xl md:text-3xl font-black tracking-[0.08em] text-gradient-gold drop-shadow-[0_0_18px_hsl(var(--primary)/0.35)]">
+            SunMaxKzn
+          </span>
+          <span className="text-muted-foreground text-base md:text-lg tracking-[0.2em] uppercase">
+            Студия защиты автомобилей в Казани
+          </span>
         </motion.p>
 
         <motion.h1
@@ -46,7 +51,7 @@ const HeroSection = ({ onStart }: { onStart: () => void }) => {
           transition={{ delay: 0.7, duration: 0.6 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
         >
-          Премиальная оклейка полиуретановой плёнкой. Рассчитайте стоимость за 1 минуту.
+          SunMaxKzn — премиальная оклейка полиуретановой плёнкой. Рассчитайте стоимость за 1 минуту.
         </motion.p>
 
         <motion.button
