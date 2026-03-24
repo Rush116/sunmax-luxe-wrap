@@ -8,14 +8,14 @@ const ContactButtons = () => {
         target="_blank"
         rel="noopener noreferrer"
         className="w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-        aria-label="WhatsApp"
+        aria-label="WhatsApp SunMaxKzn"
       >
         <MessageCircle className="w-6 h-6 text-primary-foreground" />
       </a>
       <a
         href="tel:+79001234567"
         className="w-14 h-14 rounded-full bg-gradient-gold flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
-        aria-label="Позвонить"
+        aria-label="Позвонить в SunMaxKzn"
       >
         <Phone className="w-6 h-6 text-primary-foreground" />
       </a>
