@@ -20,6 +20,7 @@ const BenefitsSection = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-4xl font-display font-bold text-center mb-4"
         >
+          Почему выбирают SunMaxKzn
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
@@ -27,7 +28,7 @@ const BenefitsSection = () => {
           viewport={{ once: true }}
           className="text-muted-foreground text-center mb-14 max-w-lg mx-auto"
         >
-          Доверьте защиту вашего автомобиля профессионалам
+          Доверьте защиту вашего автомобиля профессионалам SunMaxKzn
         </motion.p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
