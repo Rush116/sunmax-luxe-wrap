@@ -1,7 +1,37 @@
 import { motion } from "framer-motion";
 import { Shield, ChevronDown } from "lucide-react";
-import { Link } from "react-router-dom";
 import heroImg from "@/assets/hero-car.jpg";
+
+const wrapPackages = [
+  {
+    title: "Зоны риска стандарт",
+    description: "Для защиты самых уязвимых зон от летящих камней",
+    features: ["Фары", "Капот", "Полоса на крыше"],
+    imageAlt: "Зоны риска стандарт",
+  },
+  {
+    title: "Зоны риска Премиум",
+    description: "Для городской эксплуатации и частых поездок по трассе",
+    features: [
+      "Фары",
+      "Капот",
+      "Полоса на крыше",
+      "Стойки у лобового",
+      "Передний бампер",
+      "Передние крылья",
+      "Под ручками",
+      "Зона погрузки",
+      "Пороги",
+    ],
+    imageAlt: "Зоны риска Премиум",
+  },
+  {
+    title: "Полная оклейка",
+    description: "Для максимальной защиты или смены цвета автомобиля",
+    features: ["Полная оклейка кузова"],
+    imageAlt: "Полная оклейка",
+  },
+];
 
 const HeroSection = ({ onStart }: { onStart: () => void }) => {
   return (
@@ -50,15 +80,42 @@ const HeroSection = ({ onStart }: { onStart: () => void }) => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.55, duration: 0.6 }}
-          className="mb-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8 text-left"
         >
-          <Link
-            to="/risk-zones"
-            className="inline-flex items-center gap-2 rounded-xl border border-primary/30 bg-background/55 px-6 py-4 font-display text-sm md:text-base font-semibold tracking-[0.08em] uppercase text-foreground hover:bg-background/80 hover:border-primary/60 transition-all"
-          >
-            <Shield className="w-5 h-5 text-primary" />
-            Оклейка зон риска автомобиля
-          </Link>
+          {wrapPackages.map((pkg) => (
+            <div
+              key={pkg.title}
+              className="rounded-xl border border-primary/30 bg-background/55 p-5 backdrop-blur-sm"
+            >
+              <div className="relative mb-4">
+                <img
+                  src={heroImg}
+                  alt={pkg.imageAlt}
+                  className="w-full h-36 object-cover rounded-lg"
+                  loading="lazy"
+                />
+                {pkg.title === "Зоны риска стандарт" && (
+                  <>
+                    <div className="absolute left-[8%] bottom-[22%] w-[16%] h-[14%] rounded-md bg-slate-400/35" />
+                    <div className="absolute right-[8%] bottom-[22%] w-[16%] h-[14%] rounded-md bg-slate-400/35" />
+                    <div className="absolute left-[28%] top-[34%] w-[44%] h-[28%] rounded-md bg-slate-400/30" />
+                    <div className="absolute left-[40%] top-[6%] w-[20%] h-[18%] rounded-md bg-slate-400/25" />
+                  </>
+                )}
+              </div>
+              <h3 className="font-display text-lg font-bold text-foreground mb-2 uppercase tracking-[0.06em]">
+                {pkg.title}
+              </h3>
+              <p className="text-sm text-muted-foreground mb-4">{pkg.description}</p>
+              <ul className="space-y-1">
+                {pkg.features.map((feature) => (
+                  <li key={feature} className="text-sm text-foreground/95">
+                    • {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </motion.div>
 
         <motion.p
@@ -77,7 +134,7 @@ const HeroSection = ({ onStart }: { onStart: () => void }) => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
           onClick={onStart}
-          className="bg-gradient-gold text-primary-foreground font-display font-bold text-lg px-10 py-4 rounded-lg glow-gold transition-all"
+          className="bg-gradient-gold text-red-500 font-display font-bold text-lg px-10 py-4 rounded-lg glow-gold transition-all"
         >
           Рассчитать стоимость
         </motion.button>
