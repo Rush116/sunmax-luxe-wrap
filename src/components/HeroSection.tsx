@@ -7,6 +7,7 @@ const wrapPackages = [
     title: "Зоны риска стандарт",
     description: "Для защиты самых уязвимых зон от летящих камней",
     features: ["Фары", "Капот", "Полоса на крыше"],
+    imageAlt: "Зоны риска стандарт",
   },
   {
     title: "Зоны риска Премиум",
@@ -22,11 +23,13 @@ const wrapPackages = [
       "Зона погрузки",
       "Пороги",
     ],
+    imageAlt: "Зоны риска Премиум",
   },
   {
     title: "Полная оклейка",
     description: "Для максимальной защиты или смены цвета автомобиля",
     features: ["Полная оклейка кузова"],
+    imageAlt: "Полная оклейка",
   },
 ];
 
@@ -84,6 +87,12 @@ const HeroSection = ({ onStart }: { onStart: () => void }) => {
               key={pkg.title}
               className="rounded-xl border border-primary/30 bg-background/55 p-5 backdrop-blur-sm"
             >
+              <img
+                src={heroImg}
+                alt={pkg.imageAlt}
+                className="w-full h-36 object-cover rounded-lg mb-4"
+                loading="lazy"
+              />
               <h3 className="font-display text-lg font-bold text-foreground mb-2 uppercase tracking-[0.06em]">
                 {pkg.title}
               </h3>
