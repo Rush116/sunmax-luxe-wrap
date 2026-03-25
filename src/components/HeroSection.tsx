@@ -87,6 +87,14 @@ const HeroSection = ({ onStart }: { onStart: () => void }) => {
               key={pkg.title}
               className="rounded-xl border border-primary/30 bg-background/55 p-5 backdrop-blur-sm"
             >
+<<<<<<< codex-9kncp3
+              <img
+                src={heroImg}
+                alt={pkg.imageAlt}
+                className="w-full h-36 object-cover rounded-lg mb-4"
+                loading="lazy"
+              />
+=======
               <div className="relative mb-4">
                 <img
                   src={heroImg}
@@ -103,6 +111,7 @@ const HeroSection = ({ onStart }: { onStart: () => void }) => {
                   </>
                 )}
               </div>
+>>>>>>> main
               <h3 className="font-display text-lg font-bold text-foreground mb-2 uppercase tracking-[0.06em]">
                 {pkg.title}
               </h3>
