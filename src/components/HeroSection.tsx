@@ -2,6 +2,34 @@ import { motion } from "framer-motion";
 import { Shield, ChevronDown } from "lucide-react";
 import heroImg from "@/assets/hero-car.jpg";
 
+const wrapPackages = [
+  {
+    title: "Зоны риска стандарт",
+    description: "Для защиты самых уязвимых зон от летящих камней",
+    features: ["Фары", "Капот", "Полоса на крыше"],
+  },
+  {
+    title: "Зоны риска Премиум",
+    description: "Для городской эксплуатации и частых поездок по трассе",
+    features: [
+      "Фары",
+      "Капот",
+      "Полоса на крыше",
+      "Стойки у лобового",
+      "Передний бампер",
+      "Передние крылья",
+      "Под ручками",
+      "Зона погрузки",
+      "Пороги",
+    ],
+  },
+  {
+    title: "Полная оклейка",
+    description: "Для максимальной защиты или смены цвета автомобиля",
+    features: ["Полная оклейка кузова"],
+  },
+];
+
 const HeroSection = ({ onStart }: { onStart: () => void }) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -44,6 +72,32 @@ const HeroSection = ({ onStart }: { onStart: () => void }) => {
           Защитите свой автомобиль{" "}
           <span className="text-gradient-gold">навсегда</span>
         </motion.h1>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.55, duration: 0.6 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8 text-left"
+        >
+          {wrapPackages.map((pkg) => (
+            <div
+              key={pkg.title}
+              className="rounded-xl border border-primary/30 bg-background/55 p-5 backdrop-blur-sm"
+            >
+              <h3 className="font-display text-lg font-bold text-foreground mb-2 uppercase tracking-[0.06em]">
+                {pkg.title}
+              </h3>
+              <p className="text-sm text-muted-foreground mb-4">{pkg.description}</p>
+              <ul className="space-y-1">
+                {pkg.features.map((feature) => (
+                  <li key={feature} className="text-sm text-foreground/95">
+                    • {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
