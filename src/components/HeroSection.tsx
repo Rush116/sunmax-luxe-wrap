@@ -87,12 +87,22 @@ const HeroSection = ({ onStart }: { onStart: () => void }) => {
               key={pkg.title}
               className="rounded-xl border border-primary/30 bg-background/55 p-5 backdrop-blur-sm"
             >
-              <img
-                src={heroImg}
-                alt={pkg.imageAlt}
-                className="w-full h-36 object-cover rounded-lg mb-4"
-                loading="lazy"
-              />
+              <div className="relative mb-4">
+                <img
+                  src={heroImg}
+                  alt={pkg.imageAlt}
+                  className="w-full h-36 object-cover rounded-lg"
+                  loading="lazy"
+                />
+                {pkg.title === "Зоны риска стандарт" && (
+                  <>
+                    <div className="absolute left-[8%] bottom-[22%] w-[16%] h-[14%] rounded-md bg-slate-400/35" />
+                    <div className="absolute right-[8%] bottom-[22%] w-[16%] h-[14%] rounded-md bg-slate-400/35" />
+                    <div className="absolute left-[28%] top-[34%] w-[44%] h-[28%] rounded-md bg-slate-400/30" />
+                    <div className="absolute left-[40%] top-[6%] w-[20%] h-[18%] rounded-md bg-slate-400/25" />
+                  </>
+                )}
+              </div>
               <h3 className="font-display text-lg font-bold text-foreground mb-2 uppercase tracking-[0.06em]">
                 {pkg.title}
               </h3>
